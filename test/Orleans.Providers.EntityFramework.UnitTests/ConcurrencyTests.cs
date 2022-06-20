@@ -72,7 +72,7 @@ namespace Orleans.Providers.EntityFramework.UnitTests
 
             try
             {
-                _storage.WriteStateAsync(typeof(GrainWithIntegerKeyWithEtag).FullName,
+                await _storage.WriteStateAsync(typeof(GrainWithIntegerKeyWithEtag).FullName,
                     grainRef,
                     grainState);
             }

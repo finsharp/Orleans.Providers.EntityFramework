@@ -1,7 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net5.0;net6.0</TargetFrameworks>
+    <TargetFrameworks>net6.0</TargetFrameworks>
     <IsPackable>False</IsPackable>
   </PropertyGroup>
   <!-- Workaround for this bug (replace the analyzer name with the one you need to exclude (filename only, no extension) -->
@@ -22,48 +22,26 @@
   </PropertyGroup>
 
   <ItemGroup>    
-    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.10.0" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.2.0" />
     <PackageReference Include="xunit" Version="2.4.1" />
     
-    <PackageReference Include="coverlet.collector" Version="3.0.3">
+    <PackageReference Include="coverlet.collector" Version="3.1.2">
       <IncludeAssets>runtime; build; native; contentfiles; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>    
-    <PackageReference Include="microsoft.orleans.core.abstractions" Version="3.4.3" />
-    <PackageReference Include="microsoft.orleans.core" Version="3.4.3" />
+    <PackageReference Include="microsoft.orleans.core.abstractions" Version="3.6.2" />
+    <PackageReference Include="microsoft.orleans.core" Version="3.6.2" />
   </ItemGroup>
 
-  <!--<ItemGroup  Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
-    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.1">
+  <ItemGroup>
+	  <PackageReference Include="xunit.runner.visualstudio" Version="2.4.3">
       <IncludeAssets>runtime; build; native; contentfiles; buildtransitive</IncludeAssets>
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
-    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.16"/>
-    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="3.1.16" />
-    <PackageReference Include="Microsoft.Extensions.Options" Version="5.0.0" />
-    <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="5.0.0" />
-  </ItemGroup>-->
-
-  <ItemGroup  Condition=" '$(TargetFramework)' == 'net5.0' ">
-    <PackageReference Include="xunit.runner.visualstudio" Version="2.4.3">
-      <IncludeAssets>runtime; build; native; contentfiles; buildtransitive</IncludeAssets>
-      <PrivateAssets>all</PrivateAssets>
-    </PackageReference>
-    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.7"/>
-    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="5.0.7" />
-    <PackageReference Include="Microsoft.Extensions.Options" Version="5.0.0" />
-    <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="5.0.0" />
-  </ItemGroup>
-
-    <ItemGroup  Condition=" '$(TargetFramework)' == 'net6.0' ">
-      <PackageReference Include="xunit.runner.visualstudio" Version="2.4.3">
-      <IncludeAssets>runtime; build; native; contentfiles; buildtransitive</IncludeAssets>
-      <PrivateAssets>all</PrivateAssets>
-    </PackageReference>
-    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.0-preview.5.21301.9"/>
-    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="6.0.0-preview.5.21301.9" />
-    <PackageReference Include="Microsoft.Extensions.Options" Version="6.0.0-preview.5.21301.5" />
-    <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="6.0.0-preview.5.21301.5" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="6.0.6" />
+    <PackageReference Include="Microsoft.Extensions.Options" Version="6.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="6.0.6" />
   </ItemGroup>
   
   <ItemGroup>
